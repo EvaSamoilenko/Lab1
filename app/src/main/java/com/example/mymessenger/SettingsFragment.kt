@@ -6,12 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.mymessenger.databinding.FragmentSettingsBinding
+import com.example.mymessenger.viewModel.SettingsViewModel
 
 class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
+
+    private val settingsViewModel: SettingsViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,14 +29,10 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.themeSwitch.isChecked = settingsViewModel.isDarkTheme()
+
         binding.themeSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                // Включена тёмная тема
-                Log.d("Settings", "Тёмная тема включена")
-            } else {
-                // Выключена тёмная тема
-                Log.d("Settings", "Тёмная тема выключена")
-            }
+            settingsViewModel.setDarkTheme(isChecked)
         }
     }
 
