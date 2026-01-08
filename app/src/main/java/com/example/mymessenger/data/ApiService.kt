@@ -1,5 +1,6 @@
-package com.example.mymessenger
+package com.example.mymessenger.data
 
+import com.example.mymessenger.model.Message
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

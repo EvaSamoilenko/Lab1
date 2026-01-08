@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.example.mymessenger.NewsFragment"
+        android:name="com.example.mymessenger.fragments.NewsFragment"
         android:label="NewsFragment"
         tools:layout="@layout/fragment_news" />
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.mymessenger.ProfileFragment"
+        android:name="com.example.mymessenger.fragments.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.mymessenger.SettingsFragment"
+        android:name="com.example.mymessenger.fragments.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings" />
 

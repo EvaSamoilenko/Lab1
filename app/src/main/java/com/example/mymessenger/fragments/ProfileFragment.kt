@@ -1,4 +1,4 @@
-package com.example.mymessenger
+package com.example.mymessenger.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle

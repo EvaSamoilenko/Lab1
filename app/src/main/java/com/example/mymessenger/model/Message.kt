@@ -1,9 +1,10 @@
-package com.example.mymessenger
+package com.example.mymessenger.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.util.Date
 
 
 @Entity(tableName = "messages")
@@ -22,7 +23,13 @@ data class Message(
     val body: String,
 
     @ColumnInfo(defaultValue = "")
+    @SerializedName("authorEmail")
     val authorEmail: String = "",
 
-    val timestamp: Long = System.currentTimeMillis()
+    @ColumnInfo(defaultValue = "")
+    @SerializedName("avatarUrl")
+    val avatarUrl: String = "",
+
+    val timestamp: Long = Date().time,
+    var isLiked: Boolean = false
 )

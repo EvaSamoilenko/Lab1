@@ -1,4 +1,4 @@
-package com.example.mymessenger
+package com.example.mymessenger.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -22,7 +22,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        Log.d("Lifecycle", "com.example.mymessenger.SettingsFragment onCreateView")
+        Log.d("Lifecycle", "com.example.mymessenger.fragments.SettingsFragment onCreateView")
         return binding.root
     }
 
@@ -38,7 +38,7 @@ class SettingsFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d("Lifecycle", "com.example.mymessenger.SettingsFragment onDestroyView")
+        Log.d("Lifecycle", "com.example.mymessenger.fragments.SettingsFragment onDestroyView")
         _binding = null
     }
 }
